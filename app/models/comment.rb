@@ -5,7 +5,7 @@ class Comment < ActiveRecord::Base
 
   def user_attributes=(username)
     if username[:username] != ""
-      user = User.find_or_create_by(username) 
+      user = User.find_or_create_by(username)
       self.user = user
     end
   end
