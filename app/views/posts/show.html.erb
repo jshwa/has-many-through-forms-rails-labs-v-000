@@ -2,9 +2,9 @@
 
 <h2><%= @post.content %></h2>
 
-<h3>Categories</h3>
-<ul>
+Categories:
 <% @post.categories.each do |category| %>
-  <li><%= category.name %></li>
+  <%= category.name %>
 <% end %>
-</ul>
+
+<h3>comments</h3>
