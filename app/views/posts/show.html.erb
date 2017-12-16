@@ -24,5 +24,7 @@ Categories:
 
 <h3>All Commenters</h3>
 <% @post.comments.uniq.each do |comment| %>
-  <%= comment.user %>
+  <% if comment.user.username %>
+  <%= link_to comment.user.username, user_path(comment.username) %>
+  <% end %>
 <% end %>
