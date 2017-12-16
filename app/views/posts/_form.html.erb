@@ -3,7 +3,7 @@
 <%= p.text_field :title %><br><br>
 <%= p.label :content %><br>
 <%= p.text_area :content %><br><br>
-<%= p.collection_check_boxes :category_ids, Category.all, :id, :name %>
+<%= p.collection_check_boxes :category_ids, Category.all, :id, :name %><br><br>
 <%= p.fields_for :categories, post.categories.build do |cat_fields| %>
   New Category: <br>
   <%= cat_fields.text_field :name %>
