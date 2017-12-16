@@ -2,7 +2,7 @@
 
 <ul>
 <% @user.comments.each do |comment| %>
-  <li><%= link_to comment.post, post_path(comment.post) %></li>
+  <!-- <li><%= link_to comment.post, post_path(comment.post) %></li> -->
   <li><%= comment.content %></li>
 <% end %>
 </ul>
