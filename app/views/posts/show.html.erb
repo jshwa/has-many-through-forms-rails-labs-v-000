@@ -27,5 +27,5 @@ Categories:
 <h3>All Commenters</h3>
 <% user_list = @post.comments.collect {|comment| comment.user}.uniq %>
 <% user_list.each do |user| %>
-  <%= user.username %><br>
+  <a href="/users/<%= user.id %>"><%= user.username %></a><br>
 <% end %>
