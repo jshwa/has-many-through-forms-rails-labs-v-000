@@ -16,7 +16,7 @@ Categories:
   <%= p.hidden_field :post_id, :value => @post.id %>
   <%= p.label :content %>
   <%= p.text_field :content %><br><br>
-  <%= collection_select(:user, :id, User.all, :id, :username , :include_blank => "select user")%>
+  <%= collection_select(:user, :user_id, User.all, :id, :username , :include_blank => "select user")%>
   <%= p.fields_for :user, comment.build_user do |u| %>
     <%= u.text_field :username %>
   <% end %>
