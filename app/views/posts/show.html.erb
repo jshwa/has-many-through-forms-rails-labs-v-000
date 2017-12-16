@@ -8,3 +8,12 @@ Categories:
 <% end %>
 
 <h3>comments</h3>
+<% @post.comments.each do |comment| %>
+  <%= comment.name %>
+<% end %>
+
+<%= form_for comment, @post.comment.build do |p| %>
+  <%= p.label :content %>
+  <%= p.text_field :content %>
+  <%= p.submit %>
+<% end %>
