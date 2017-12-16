@@ -11,6 +11,7 @@ Categories:
 <% @post.comments.each do |comment| %>
   <%= comment.user.username %> says: <%= comment.content %><br>
 <% end %>
+<br>
 
 <%= form_for (comment = @post.comments.build) do |p| %>
   <%= p.hidden_field :post_id, :value => @post.id %>
