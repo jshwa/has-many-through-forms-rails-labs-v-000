@@ -9,7 +9,7 @@ Categories:
 
 <h3>comments</h3>
 <% @post.comments.each do |comment| %>
-  <%= comment.name %>
+  <%= comment.content %>
 <% end %>
 
 <%= form_for (comment = @post.comments.build) do |p| %>
