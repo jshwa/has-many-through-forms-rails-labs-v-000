@@ -25,3 +25,6 @@ Categories:
 <% end %>
 
 <h3>All Commenters</h3>
+<% @post.comments.uniq.each do |comment| %>
+  <%= comment.user.username %> <br>
+<% end %>
