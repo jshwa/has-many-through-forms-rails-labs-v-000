@@ -7,6 +7,6 @@
 <%= p.fields_for :categories, @post.categories.build do |cat_fields| %>
   New Category: <br>
   <%= cat_fields.text_field :name %>
-<% end %>
+<% end %><br><br>
 <%= p.submit %>
 <% end %>
