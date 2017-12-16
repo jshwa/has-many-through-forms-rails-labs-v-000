@@ -5,7 +5,7 @@
 <%= p.text_area :content %><br><br>
 <%= p.collection_check_boxes :category_id, Category.all, :id, :name %>
 <%= p.fields_for :categories, @post.categories.build do |cat_fields| %>
-  <%= cat_fields.text_field :name %>
+  New Category<%= cat_fields.text_field :name %>
 <% end %>
 <%= p.submit %>
 <% end %>
