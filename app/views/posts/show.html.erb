@@ -18,7 +18,6 @@ Categories:
   <%= p.text_field :content %><br><br>
   <%= collection_select(:user, :id, User.all, :id, :username , :include_blank => "select user")%>
   <%= p.fields_for :user, comment.build_user do |u| %>
-    <%= u.collection_select(:id, User.all, :id, :username , :include_blank => "select user") %>
     <%= u.text_field :username %>
   <% end %>
   <%= p.submit %>
