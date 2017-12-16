@@ -12,7 +12,7 @@ Categories:
   <%= comment.name %>
 <% end %>
 
-<%= form_for :comments, @post.comment.build do |p| %>
+<%= form_for :comments, @post.comments.build do |p| %>
   <%= p.label :content %>
   <%= p.text_field :content %>
   <%= p.submit %>
